@@ -3,32 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Internet_Provider_Website</title>
+    <title>@ViewData["Title"] - InternetServiceProvider</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Internet_Provider_Website</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <ul class="header-container">
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle navbar-brand text-color" asp-page="/Index" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Internet Service Provider
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Услуги</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Акции и бонусы</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Оплата</a>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </li>
+            <li><a asp-page="/Tariffs" class="nav-item  text-color">Тарифы</a></li>
+            <li><a asp-page="/Chat" class="nav-item  text-color">Чат</a></li>
+            <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
+            <li>
+                <div class="right-item">
+                    <a asp-page="/LK" class="nav-item  text-color" id="Login">Войти</a>
+                    <a asp-page="/Registration-page" class="nav-item  text-color " id="Registration">Регистрация</a>
+                </div>
+            </li>
+        </ul>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -37,7 +43,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Internet_Provider_Website - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2020 - InternetServiceProvider - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
@@ -45,6 +51,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
