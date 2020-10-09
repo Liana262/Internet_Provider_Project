@@ -91,7 +91,6 @@ header {
 .btn.btn-primary:active:hover,
 .btn.btn-primary:focus {
         background-color: #ff9327;
-        background-color: #ff9327;
         outline: none !important;
         box-shadow: none !important;
     }
@@ -175,9 +174,44 @@ button.offers-request-text {
     align-items: center;
 }
 
-.carousel-item {
-    flex:1 0 auto;
+
+/*регистрация*/
+
+
+.reg-inner-content{
+    position: relative;
+    display: block;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 6%;
+    padding: 20px 13px;
+    max-width: 500px;
+    font-size:17px;
 }
 
+.form-control.choose-city{
+    border:none;
+    font-size:17px;
+    padding: 0  !important;
+    margin-left: 0 !important;
+}
 
+.form-city{
+    margin-left: 0 !important;
+    max-width: 80px;
+}
 
+#inputCity:focus {
+        border:none !important;
+        outline: none !important; 
+        box-shadow: none !important;
+}
+
+#inputCity:hover{
+    text-decoration: underline;
+}
+
+.reg-btn{
+    font-size: 17px;
+    margin-left: 0 !important;
+}
